@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viáticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<main class="app-container">
+
+<section class="card">
+
+<header class="header">
+    <p class="eyebrow">Oficina FAO-HONDURAS · Vigencia 2026</p>
+    <h1>Calculadora de Viáticos</h1>
+    <p class="subtitle">Calcule el viático según destino, noches, duración, moneda y deducciones diarias.</p>
+</header>
+
+<section class="form-grid">
+
+    <div class="form-section">
+        <label for="destination">Destino</label>
+        <select id="destination">
+            <option value="">Seleccione destino</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label for="days">Noches que pernoctarás</label>
+        <input type="number" id="days" min="0" value="1">
+        <p class="field-note">Use 0 si el viaje es ida y vuelta el mismo día.</p>
+    </div>
+
+    <div class="form-section">
+        <label>Duración</label>
+        <div class="segmented-control">
+            <label>
+                <input type="radio" name="duration" value="upTo60Days" checked>
+                <span>Hasta 60 días</span>
+            </label>
+            <label>
+                <input type="radio" name="duration" value="over60Days">
+                <span>Más de 60 días</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <label>Moneda</label>
+        <div class="segmented-control">
+            <label>
+                <input type="radio" name="currency" value="local" checked>
+                <span>HNL</span>
+            </label>
+            <label>
+                <input type="radio" name="currency" value="usd">
+                <span>USD</span>
+            </label>
+        </div>
+    </div>
+
+</section>
+
+<section class="deductions-panel">
+
+    <div class="section-title">
+        <h2>Deducciones por día</h2>
+        <p>Marque solo lo que ya fue cubierto por la organización y debe descontarse del viático.</p>
+    </div>
+
+    <div class="quick-actions">
+        <button type="button" class="secondary-btn" data-apply="lodging">Hospedaje todos</button>
+        <button type="button" class="secondary-btn" data-apply="breakfast">Desayuno todos</button>
+        <button type="button" class="secondary-btn" data-apply="lunch">Almuerzo todos</button>
+        <button type="button" class="secondary-btn" data-apply="dinner">Cena todos</button>
+        <button type="button" class="secondary-btn" data-apply="incidentals">Incidentales todos</button>
+        <button type="button" class="secondary-btn danger" id="clearDeductions">Limpiar</button>
+    </div>
+
+    <div id="dailyDeductions" class="daily-deductions"></div>
+
+</section>
+
+<button type="button" id="calculateBtn" class="primary-btn">
+    Calcular viático
+</button>
+
+<section class="results">
+
+    <div class="section-title">
+        <h2>Resultado</h2>
+        <p>Resumen estimado del viático a pagar.</p>
+    </div>
+
+    <div class="result-main">
+        <span>Total del viaje</span>
+        <strong id="tripTotal">--</strong>
+    </div>
+
+    <div class="result-grid">
+        <div class="result-item">
+            <span>Promedio diario</span>
+            <strong id="dailyRate">--</strong>
+        </div>
+        <div class="result-item">
+            <span>Tarifa base diaria</span>
+            <strong id="baseDailyRate">--</strong>
+        </div>
+        <div class="result-item">
+            <span>Total deducido</span>
+            <strong id="totalDeductions">--</strong>
+        </div>
+        <div class="result-item">
+            <span>Noches calculadas</span>
+            <strong id="daysCalculated">--</strong>
+        </div>
+    </div>
+
+</section>
+
+</section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>

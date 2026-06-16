@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "app": "Calculadora de Viáticos",
+    "country": "Honduras",
+    "effectiveDate": "2026-01-01",
+    "currencyLocal": "HNL",
+    "currencyUSD": "USD"
+  },
+  "standardPercentages": {
+    "lodging": 50,
+    "breakfast": 6,
+    "lunch": 12,
+    "dinner": 12,
+    "incidentals": 20,
+    "total": 100
+  },
+  "destinations": [
+    {
+      "id": "elsewhere",
+      "name": "Elsewhere",
+      "lodgingPercentage": 59,
+      "rates": {
+        "upTo60Days": {
+          "usd": 133,
+          "local": 3480
+        },
+        "over60Days": {
+          "usd": 100,
+          "local": 2610
+        }
+      }
+    },
+    {
+      "id": "roatan",
+      "name": "Roatán",
+      "lodgingPercentage": 75,
+      "rates": {
+        "upTo60Days": {
+          "usd": 326,
+          "local": 8520
+        },
+        "over60Days": {
+          "usd": 245,
+          "local": 6400
+        }
+      }
+    },
+    {
+      "id": "roatan-paradise-beach",
+      "name": "Roatán (Paradise Beach)",
+      "lodgingPercentage": 87,
+      "rates": {
+        "upTo60Days": {
+          "usd": 450,
+          "local": 11800
+        },
+        "over60Days": {
+          "usd": 338,
+          "local": 8830
+        }
+      }
+    },
+    {
+      "id": "san-pedro-sula",
+      "name": "San Pedro Sula",
+      "lodgingPercentage": 70,
+      "rates": {
+        "upTo60Days": {
+          "usd": 234,
+          "local": 6120
+        },
+        "over60Days": {
+          "usd": 176,
+          "local": 4600
+        }
+      }
+    },
+    {
+      "id": "tegucigalpa",
+      "name": "Tegucigalpa",
+      "lodgingPercentage": 60,
+      "rates": {
+        "upTo60Days": {
+          "usd": 237,
+          "local": 6190
+        },
+        "over60Days": {
+          "usd": 178,
+          "local": 4650
+        }
+      }
+    },
+    {
+      "id": "tegucigalpa-real-intercontinental",
+      "name": "Tegucigalpa (Real Intercontinental)",
+      "lodgingPercentage": 77,
+      "rates": {
+        "upTo60Days": {
+          "usd": 395,
+          "local": 10300
+        },
+        "over60Days": {
+          "usd": 296,
+          "local": 7740
+        }
+      }
+    }
+  ]
+}
